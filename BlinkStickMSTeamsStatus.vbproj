@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <ImportedNamespaces>BlinkStickDotNet=False,HidSharp=False,LibUsbDotNet=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,BlinkStickMSTeamsStatus=True</ImportedNamespaces>
+    <Description>Get MS Teams online status and change the BlinkStick Nano to the same color.</Description>
+    <Copyright>Writtn by Jason Rhoades @ January 2024</Copyright>
+    <PackageIcon>traffic-lights.png</PackageIcon>
+    <ApplicationIcon>traffic-lights.ico</ApplicationIcon>
+    <Title>BlinkStick Teams Status</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="traffic-lights.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="BlinkStickDotNet" />
+    <Import Include="HidSharp" />
+    <Import Include="LibUsbDotNet" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BlinkStickDotNet">
+      <HintPath>BlinkStickDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="HidSharp">
+      <HintPath>HidSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibUsbDotNet">
+      <HintPath>LibUsbDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BlinkStickTeams.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="traffic-lights.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
