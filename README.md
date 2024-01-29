@@ -8,6 +8,9 @@ This project scans a local log file created by Microsoft Teams and looks for the
 
 From there I match up colors and blinking status with each different Teams status and then push it to the BlinkStick.
 
-I hope this code helps someone else save some time creating their project. It is written using VB.NET in Visual Studio 2022 (free Community version).
+I hope this code helps someone else save some time creating their project. 
+
+It is written using VB.NET in Visual Studio 2022 (free Community version).
+I am also using compiled version of the BlinkStickDotNet binary found here https://github.com/arvydas/BlinkStickDotNet.
 
 Enjoy!
